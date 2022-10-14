@@ -323,7 +323,8 @@ Advantages */
     fill: currentColor;
 }
 
-.team .net-link:hover {
+.team .net-link:hover,
+.team .net-link:focus {
     background-color: var(--secondary-color);
     border-radius: 50%;
     color: #fff;
@@ -358,7 +359,8 @@ justify-content: space-between;
     fill: currentColor;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
 }
@@ -435,7 +437,8 @@ justify-content: space-between;
     fill: currentColor;
 }
 
-.net-list-footer .net-link:hover {
+.net-list-footer .net-link:hover,
+.net-list-footer .net-link:focus {
     background-color: var(--secondary-color);
 }
 
