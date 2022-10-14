@@ -7,8 +7,7 @@
     --bgd-hero-color: rgba(47, 48, 58, 1);
     --focus-btn-color: rgb(16, 137, 236);
     --bgd-team-color: rgba(245, 244, 250, 1);
-    --contacts-footer-color: rgba(255, 255, 255, 0.6);
-
+    --contacts-footer-color: rgba(255, 255, 255, 0.6); 
 }
 
 body {
@@ -101,7 +100,7 @@ ul {
 }
 
 .site-contacts>.item+.item {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .site-nav .link,
@@ -114,7 +113,15 @@ ul {
 }
 
 .site-contacts .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--descr-color);
+}
+
+.site-contacts .site-contacts-icon {
+    fill: currentColor;
+    margin-right: 10px;
 }
 
 .site-nav .active {
@@ -133,6 +140,8 @@ ul {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgd.jpg);
     max-width: 1600px;
     padding: 200px 0;
+    margin-right: auto;
+    margin-left: auto;
     color: var(--primary-bgd-color);
     text-align: center;
     letter-spacing: 0.06em;
@@ -194,6 +203,17 @@ Advantages */
 
 .advantages .item:not(:last-child) {
     margin-right: 30px;
+}
+
+.advantages-bgd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--bgd-team-color);
+    border-radius: 4px;
 }
 
 .advantages .advantages-title {
@@ -276,6 +296,71 @@ Advantages */
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    margin-bottom: 16px;
+}
+
+
+.team .net-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    width: 206px;
+    height: 44px;
+}
+
+.team .net-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(175, 177, 184, 1);
+}
+
+.team .net-icon {
+    fill: currentColor;
+}
+
+.team .net-link:hover {
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    color: #fff;
+}
+
+/* clients */
+.clients-title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.clients-list {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: rgba(175, 177, 184, 1);
+}
+
+.clients-icon {
+    fill: currentColor;
+}
+
+.clients-link:hover {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 /* footer */
@@ -309,6 +394,54 @@ Advantages */
 .contacts .link:hover,
 .contacts .link:focus {
     color: var(--secondary-color);
+}
+
+.net-list-footer {
+    margin-left: 70px;
+}
+
+.net-list-footer > .upper {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.net-list-footer {
+    width: 206px;
+}
+
+.net-list-footer .net-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.net-list-footer .net-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.net-list-footer .net-icon {
+    fill: currentColor;
+}
+
+.net-list-footer .net-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.page-footer .container {
+    display: flex;
+    align-items: baseline;
 }
 
 /* Page Portfolio*/
@@ -356,12 +489,13 @@ Advantages */
 }
 
 .examples>.poster {
-    /* flex-basis: calc(100%/3-30px); */
+    width: 370px;
     margin-left: 30px;
     margin-top: 30px;
 }
 
 .poster>.content {
+    width: 100%;
     padding: 20px 24px;
     border-right: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
