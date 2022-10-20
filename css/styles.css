@@ -70,14 +70,13 @@ ul {
 
 /* Навігація основної сторінки */
 .page-header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    height: 80px;
     border-bottom: 1px solid #ECECEC;
-    ;
 }
 
 .page-header>.container {
     display: flex;
+    height: 100%;
     align-items: center;
 }
 
