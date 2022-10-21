@@ -8,6 +8,7 @@
     --focus-btn-color: rgb(16, 137, 236);
     --bgd-team-color: rgba(245, 244, 250, 1);
     --contacts-footer-color: rgba(255, 255, 255, 0.6); 
+    --gap: 30px;
 }
 
 body {
@@ -51,6 +52,12 @@ ul {
     text-decoration: none;
 }
 
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* Логотип */
 .logo {
     margin-right: 93px;
@@ -69,8 +76,8 @@ ul {
 }
 
 /* Навігація основної сторінки */
-.page-header {
-    height: 80px;
+.page-header { 
+    padding: 24px 0 25px 0;
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -123,8 +130,24 @@ ul {
     margin-right: 10px;
 }
 
+.site-nav .link {
+    padding: 32px 0;
+}
+
 .site-nav .active {
+    position: relative;
     color: var(--secondary-color);
+}
+
+.site-nav .active::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: currentColor;
+    border-radius: 2px;
 }
 
 .site-nav .link:hover,
@@ -247,6 +270,29 @@ Advantages */
 
 .activity .item:not(:last-child) {
     margin-right: 30px;
+}
+
+.thumb {
+    position: relative;
+}
+
+.activity .photo-label {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    
+}
+
+.activity .photo-descr {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 /*team*/
@@ -487,14 +533,43 @@ justify-content: space-between;
 .projects .examples {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    margin-left: -1 * var(--gap);
+    margin-top: -1 * var(--gap);
 }
 
 .examples .poster {
-    width: 370px;
-    margin-left: 30px;
-    margin-top: 30px;
+    flex-basis: calc((100% / 3 - var(--gap)));
+    margin-left: var(--gap);
+    margin-top: var(--gap);
+}
+
+.examples .thumb {
+    position: relative;
+    overflow: hidden;
+        
+}
+
+.examples .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    padding: 63px 24px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    transition: transform 250ms linear;
+}
+
+.examples .overlay-descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: #fff;
+}
+
+.examples .poster:hover .overlay {
+    transform: translateY(0);
 }
 
 .poster .content {
